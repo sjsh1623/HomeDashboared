@@ -1,21 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, SafeAreaView, Text, View} from 'react-native';
+import WeatherTemplate from "./src/component/template/WeatherTemplate";
 
 export default function App() {
-
-  return (
-    <View style={styles.container}>
-      <Text>오케이</Text>
-      <StatusBar style="translucent" />
-    </View>
-  );
+    return (
+        <SafeAreaView style={styles.container}>
+            <WeatherTemplate/>
+        </SafeAreaView>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+      backgroundColor: 'white',
+      height: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
 });
